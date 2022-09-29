@@ -1,0 +1,23 @@
+package com.Java;
+
+public class InterviewSamples {
+    public static void main(String[] args){
+
+        //Reverse a string using toCharArray() method in String
+        String old = "testing";
+        String nw = "";
+        char ch;
+        System.out.println("old string is" + old);
+        for(int m=0;m<old.length();m++){
+            ch = old.charAt(m);
+            nw= ch+nw;
+        }
+        System.out.println("Reversed string is "+ nw);
+        //Objects in String are immutable. String class in java doest not have reverse()
+        // instead we can use StringBuffer reverse() method 
+        //reverse a string using string buffer method
+        StringBuffer input = new StringBuffer();
+        input.append(old);
+        System.out.println(input.reverse());
+    }
+}
